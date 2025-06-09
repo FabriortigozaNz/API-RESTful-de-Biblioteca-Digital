@@ -1,0 +1,74 @@
+# 📚 API RESTful de Biblioteca Digital
+
+Este proyecto es una API RESTful desarrollada con TypeScript, Express y MongoDB. Permite gestionar libros en una base de datos: crearlos, leerlos, actualizarlos y eliminarlos (CRUD).
+
+## 🧱 Arquitectura
+
+El proyecto está organizado siguiendo el patrón MVC (Modelo-Vista-Controlador), lo que mejora la separación de responsabilidades y facilita el mantenimiento del código:
+
+Modelos: definiciones de datos con Mongoose (/models)
+
+Controladores: lógica para manejar peticiones y respuestas (/controllers)
+
+Rutas: definen los endpoints de la API (/routes)
+
+## 🚀 Tecnologías utilizadas
+
+Node.js
+
+TypeScript
+
+Express
+
+Mongoose (MongoDB)
+
+ts-node-dev (para desarrollo)
+
+## Instalación de dependencias
+
+ npm init -y 
+
+ npm i ts-node-dev typescript -D
+
+ npx tsc --init
+
+ npm install express mongoose
+
+
+## ⚙️ Scripts útiles
+
+Para correr el servidor en desarrollo con recarga automática:
+
+npx ts-node-dev src/index.ts
+
+Asegurate de que la ruta coincida con tu archivo principal (src/index.ts o similar).
+
+
+## 📁 Estructura del proyecto
+
+src/
+├── config/          # Conexión a MongoDB
+├── controllers/     # Lógica CRUD de libros
+├── interfaces/      # Interfaces TypeScript (IBook)
+├── models/          # Modelos de datos (Mongoose)
+├── routes/          # Endpoints de la API
+├── utils/           # Helpers como sendSuccess/sendError
+└── index.ts         # Punto de entrada de la app
+
+
+## 📬 Endpoints disponibles
+
+GET    /api/books – Obtener todos los libros
+
+GET    /api/books/:id – Obtener libro por ID
+
+POST   /api/books – Crear nuevo libro
+
+PATCH  /api/books/:id – Actualizar libro
+
+DELETE /api/books/:id – Eliminar libro
+
+
+## 🧪 Probar la API
+
+Podés usar herramientas como Postman, Insomnia o Thunder Client para probar los endpoints.
